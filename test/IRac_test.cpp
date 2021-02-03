@@ -1,4 +1,4 @@
-// Copyright 2019 David Conran
+// Copyright 2019-2021 David Conran
 
 #include <string>
 #include "ir_Airwell.h"
@@ -394,7 +394,7 @@ TEST(TestIRac, Daikin2) {
   IRrecv capture(kGpioUnused);
   char expected[] =
       "Power: On, Mode: 3 (Cool), Temp: 19C, Fan: 1 (Low), "
-      "Swing(V): 14 (Auto), Swing(H): 170 (UNKNOWN), Clock: 00:00, "
+      "Swing(V): 14 (Off), Swing(H): 170 (Middle), Clock: 00:00, "
       "On Timer: Off, Off Timer: Off, Sleep Timer: Off, Beep: 2 (Loud), "
       "Light: 1 (High), Mould: On, Clean: On, Fresh: Off, Eye: Off, "
       "Eye Auto: Off, Quiet: Off, Powerful: Off, Purify: On, Econo: Off";
@@ -990,7 +990,7 @@ TEST(TestIRac, Mitsubishi) {
   IRrecv capture(kGpioUnused);
   char expected[] =
       "Power: On, Mode: 3 (Cool), Temp: 20C, Fan: 2 (Medium), "
-      "Swing(V): 0 (Auto), Swing(H): 3 (UNKNOWN), "
+      "Swing(V): 0 (Auto), Swing(H): 3 (Middle), "
       "Clock: 14:30, On Timer: 00:00, Off Timer: 00:00, Timer: -";
 
   ac.begin();
